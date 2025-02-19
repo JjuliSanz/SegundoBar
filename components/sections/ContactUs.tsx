@@ -18,6 +18,7 @@ const ContactUs = () => {
   return (
     <LazyMotion features={domAnimation}>
       <m.section
+      id="contacto"
         ref={ref}
         className="relative w-full pt-20"
         style={{

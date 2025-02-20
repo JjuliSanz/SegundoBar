@@ -26,13 +26,13 @@ const SearchBarMenu = ({ placeholder }: { placeholder: string }) => {
         Search
       </label>
       <input
-        className="peer block w-full bg-segundo text-lg sm:text-2xl font-medium text-quinto placeholder-quinto border-2 border-quinto rounded-xl pl-10 py-2 transition duration-300 ease-in-out focus:outline-none focus:ring-0 focus:bg-quinto focus:text-segundo focus:placeholder-segundo"
+        className="peer block w-full bg-gradient-to-br from-segundo to-tercero text-lg sm:text-2xl font-medium text-quinto placeholder-quinto border-2 border-quinto rounded-xl pl-10 py-2 transition duration-300 ease-in-out focus:outline-none focus:ring-0 focus:text-sexto focus:placeholder-sexto"
         placeholder={placeholder}
         onChange={(e) => {
           handleSearch(e.target.value);
         }}
       />
-      <SearchIcon className="absolute left-3 top-1/2 w-5 h-5 -translate-y-1/2 text-quinto peer-focus:text-segundo" />
+      <SearchIcon className="absolute left-3 top-1/2 w-5 h-5 -translate-y-1/2 text-quinto peer-focus:text-sexto" />
     </div>
   );
 };

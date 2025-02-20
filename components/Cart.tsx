@@ -64,7 +64,7 @@ const Cart = ({ classNameProp }: { classNameProp: string }) => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 0, opacity: 0 }}
             transition={{ ease: "easeInOut", duration: 0.5 }}
-            className="bg-segundo w-full sm:w-1/3 max-h-screen p-6 overflow-auto overscroll-contain flex flex-col gap-6 z-20 "
+            className="bg-segundo w-full sm:w-2/3 max-h-screen p-6 overflow-auto overscroll-contain flex flex-col gap-6 z-20 "
             onClick={(e) => e.stopPropagation()}
           >
             <div className="w-full flex justify-between ">
@@ -72,7 +72,7 @@ const Cart = ({ classNameProp }: { classNameProp: string }) => {
 
               <CloseIcon
                 width={30}
-                className="text-sexto cursor-pointer font-bold hover:scale-95 transition ease-in duration-150 hover:opacity-70 active:scale-95 active:opacity-70"
+                className="text-quinto cursor-pointer font-bold hover:scale-95 transition ease-in duration-150 hover:opacity-70 active:scale-95 active:opacity-70"
                 onClick={closeCart}
               />
             </div>
@@ -130,7 +130,7 @@ const Cart = ({ classNameProp }: { classNameProp: string }) => {
 
                     <TrashIcon
                       width={24}
-                      className="cursor-pointer text-sexto hover:scale-95 transition ease-in duration-150 hover:opacity-70 active:scale-95 active:opacity-70"
+                      className="cursor-pointer text-quinto hover:scale-95 transition ease-in duration-150 hover:opacity-70 active:scale-95 active:opacity-70"
                       onClick={() => removeFromCart(item.id)}
                     />
                   </div>
@@ -149,7 +149,7 @@ const Cart = ({ classNameProp }: { classNameProp: string }) => {
               <Link
                 href="/checkout"
                 className={
-                  "w-fit mx-auto px-3 py-1 flex motion-safe:transition duration-300 ease-in-out text-2xl font-medium rounded bg-segundo hover:bg-quinto border-4 border-quinto text-quinto outline-none focus:outline-none hover:text-segundo hover:scale-95 active:scale-95 box-shadow-quinto-xs"
+                  "w-fit mx-auto px-3 py-1 flex motion-safe:transition duration-300 ease-in-out text-2xl font-medium rounded bg-segundo hover:bg-quinto border-4 border-quinto text-quinto outline-none focus:outline-none hover:text-segundo hover:scale-95 active:scale-95 "
                 }
               >
                 Hacer pedido

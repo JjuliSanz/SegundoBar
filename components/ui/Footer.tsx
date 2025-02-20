@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="flex items-center gap-4">
           <Logo className="w-[50px] h-[50px] logo" />
         </div>
-        <span aria-hidden="true" className="hidden sm:inline quinto-svg">
+        <span aria-hidden="true" className="hidden sm:inline drop-shadow-quinto">
           |
         </span>
         <div className="flex items-center gap-4">
@@ -33,7 +33,7 @@ const Footer = () => {
             href="https://www.instagram.com/mustangbarngrill/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto quinto-svg"
+            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto drop-shadow-quinto"
             aria-label="Instagram del restaurante, se abrirá en una nueva pestaña"
           >
             <Instagram className="w-6 h-6" />
@@ -54,7 +54,7 @@ const Footer = () => {
           <Link
             href="https://mustang.meitre.com/"
             target="_blank"
-            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto quinto-svg"
+            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto drop-shadow-quinto"
             aria-label="Resevas del restaurante, se abrirá en una nueva pestaña"
           >
             <ReserveIcon width={24} height={24} />
@@ -76,7 +76,7 @@ const Footer = () => {
             href="https://www.facebook.com/MustangMeatMarket/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto text-3xl quinto-svg"
+            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto text-3xl drop-shadow-quinto"
             aria-label="Facebook del restaurante, se abrirá en una nueva pestaña"
           >
             <Facebook width={24} height={24} />
@@ -87,7 +87,7 @@ const Footer = () => {
             href="https://queresto.com/mustangmeatmarket/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto text-3xl quinto-svg"
+            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto text-3xl drop-shadow-quinto"
           >
             <PDFIcon width={24} height={24} />
           </Link>

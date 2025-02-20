@@ -151,28 +151,28 @@ body {
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
 }
 
-/* SVG SHADOW */
-.quinto-svg {
+/* DROP SHADOW */
+.drop-shadow-quinto {
   filter: drop-shadow(0 0 1px var(--quinto)) drop-shadow(0 0 5px var(--quinto))
     drop-shadow(0 0 10px var(--quinto));
 }
-.quinto-svg-sm {
+.drop-shadow-quinto-sm {
   filter: drop-shadow(0 0 5px var(--quinto));
 }
-.cuarto-svg {
+.drop-shadow-cuarto {
   filter: drop-shadow(0 0 1px var(--cuarto)) drop-shadow(0 0 5px var(--cuarto))
     drop-shadow(0 0 10px var(--cuarto));
 }
-.cuarto-xs-svg {
+.drop-shadow-cuarto-xs {
   filter: drop-shadow(0 0 5px var(--cuarto));
 }
 
-.tercero-svg {
+.drop-shadow-tercero {
   filter: drop-shadow(0 0 1px var(--tercero))
     drop-shadow(0 0 5px var(--tercero)) drop-shadow(0 0 10px var(--tercero));
 }
 
-.sexto-svg {
+.drop-shadow-sexto {
   filter: drop-shadow(0 0 1px var(--sexto)) drop-shadow(0 0 5px var(--sexto))
     drop-shadow(0 0 10px var(--sexto));
 }

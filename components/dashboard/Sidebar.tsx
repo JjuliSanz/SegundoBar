@@ -15,7 +15,7 @@ const Sidebar = async () => {
           href="/"
           className=""
         >
-          <Logo className="w-[50px] h-[60px] text-sexto quinto-svg transition-all duration-300 ease-in-out hover:scale-[.9]" />
+          <Logo className="w-[50px] h-[60px] text-sexto drop-shadow-quinto transition-all duration-300 ease-in-out hover:scale-[.9]" />
         </Link>
       </div>
       <nav className="flex-1 p-4 flex flex-col justify-between">

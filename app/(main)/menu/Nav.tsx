@@ -1,5 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import Cart from "@/components/Cart";
+import Logo from "@/components/ui/Logo";
+import { useSectionStore } from "@/store/sectionStore";
+import { cn } from "@/utils/cn";
 import {
   m,
   LazyMotion,
@@ -10,13 +13,8 @@ import {
   easeInOut,
   AnimatePresence,
 } from "framer-motion";
-// import { ContactButton } from "./ContactButton";
 import Link from "next/link";
-import Cart from "../Cart";
-import { cn } from "@/utils/cn";
-
-import { useSectionStore } from "@/store/sectionStore";
-
+import React, { useState } from "react";
 
 const ListItem = ({
   href,
@@ -51,26 +49,13 @@ const ListItem = ({
   );
 };
 
-const Navbar = () => {
+const Nav = () => {
   const [showMenu, setShowMenu] = useState(false);
-
-  // Hook para detectar el scroll
-  const { scrollY } = useScroll();
-
-  // Transformamos el valor del scroll en opacidad
-  const opacity = useTransform(scrollY, [0, 700], [0, 1], { ease: easeInOut });
-  const scaleX = useTransform(scrollY, [0, 700], [0, 1], { ease: easeInOut });
 
   return (
     <LazyMotion features={domAnimation}>
-      <m.nav
-        style={{ opacity }}
-        className="w-full fixed top-0 z-50 bg-segundo/60 backdrop-blur-md"
-      >
-        <m.hr
-          style={{ scaleX }}
-          className="absolute bottom-0 h-[4px] w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-quinto to-transparent bg-center"
-        />
+      <m.nav className="w-full relative z-50 bg-segundo/60 backdrop-blur-md">
+        <m.hr className="absolute bottom-0 h-[4px] w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-quinto to-transparent bg-center" />
         <ul className="relative px-2 flex justify-between items-center text-quinto  text-xl font-medium font-primary h-[60px] ">
           {/* HOME */}
           {/* <ListItem
@@ -78,7 +63,13 @@ const Navbar = () => {
             title="MUSTANG"
             classNameProp="order-3 md:order-first "
           /> */}
-          <div className="order-3 md:order-first w-[50px]"></div>
+          <Link
+            href="/"
+            className="w-[45px] h-[50px] order-3 md:order-first logo hover:scale-95 transition ease-in duration-150 hover:opacity-70 active:scale-95 active:opacity-70"
+          >
+            <Logo className="w-full h-full" />
+          </Link>
+
           {/* DESKTOP MENU */}
           <ListItem href="/menu" title="MENÚ" classNameProp="hidden md:block" />
           {/* ABOUT US */}
@@ -145,4 +136,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Nav;

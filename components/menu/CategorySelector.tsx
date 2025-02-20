@@ -15,7 +15,7 @@ const CategorySelector = ({
     router.push(`/menu?category=${category}`);
   };
   return (
-    <nav className="w-full max-w-[80%] mx-auto flex justify-center p-4 border-2 border-quinto bg-segundo rounded-xl relative z-20 text-quinto">
+    <nav className="w-fit min-w-[250px] max-w-[80%] mx-auto flex justify-center p-4 border-2 border-quinto bg-gradient-to-br from-segundo to-tercero rounded-xl relative z-20">
       <ul className="flex flex-wrap justify-center text-balance gap-4 z-20">
         {categories.length === 0 ? (
           <li className="text-lg font-semibold">

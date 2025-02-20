@@ -39,7 +39,7 @@ const Videos = () => {
     <LazyMotion features={domAnimation}>
       <m.section
         ref={ref}
-        className="w-full bg-[url('/galeria/galeria-13-mobile.webp')]   bg-cover bg-center bg-fixed"
+        className="w-full bg-[url('/galeria/galeria-13.webp')] bg-cover bg-center bg-fixed"
       >
         <m.div
           initial="hidden"
@@ -80,7 +80,7 @@ const Videos = () => {
             <Link
               href="https://2dobar.meitre.com/"
               target="_blank"
-              className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70 quinto-svg"
+              className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70 drop-shadow-quinto"
               aria-label="Resevas del restaurante, se abrirá en una nueva pestaña"
             >
               <ReserveIcon className="w-6 md:w-10 h-6 md:h-10" />
@@ -88,7 +88,7 @@ const Videos = () => {
             <Link
               href="https://www.instagram.com/segundo_bar/"
               target="_blank"
-              className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70 quinto-svg"
+              className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70 drop-shadow-quinto"
               aria-label="Instagram del restaurante, se abrirá en una nueva pestaña"
             >
               <Instagram className="w-6 md:w-10 h-6 md:h-10" />

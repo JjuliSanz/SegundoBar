@@ -131,7 +131,7 @@ const Gallery = () => {
             href="https://www.instagram.com/mustangbarngrill/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram de Las Palmas, se abrirá en una nueva pestaña"
+            aria-label="Instagram del restaurante, se abrirá en una nueva pestaña"
             className="button motion-safe:transition duration-150 ease-in-out font-primary uppercase "
           >
             <Instagram className="w-10 h-10" />

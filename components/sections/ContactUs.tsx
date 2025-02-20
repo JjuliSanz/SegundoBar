@@ -43,7 +43,7 @@ const ContactUs = () => {
           {/* ADDRESS */}
           <m.li
             variants={left}
-            className="flex items-center gap-2 w-fit quinto-svg-sm"
+            className="flex items-center gap-2 w-fit drop-shadow-quinto-sm"
           >
             <PinIcon className="w-6 md:w-10 h-6 md:h-10" /> Av. Coronel Diaz
             1890, Buenos Aires.
@@ -53,7 +53,7 @@ const ContactUs = () => {
             <Link
               href="https://2dobar.meitre.com/"
               target="_blank"
-              className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70 quinto-svg-sm"
+              className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70 drop-shadow-quinto-sm"
               aria-label="Resevas del restaurante, se abrirá en una nueva pestaña"
             >
               <ReserveIcon className="w-6 md:w-10 h-6 md:h-10" />
@@ -67,14 +67,14 @@ const ContactUs = () => {
           {/* TIME */}
           <m.li
             variants={left}
-            className="flex items-center gap-2 w-fit quinto-svg-sm"
+            className="flex items-center gap-2 w-fit drop-shadow-quinto-sm"
           >
             <ClockIcon className="w-6 md:w-10 h-6 md:h-10" />{" "}
             <span> Martes a Domingos de 05:00pm a 01:00am</span>
           </m.li>
           <m.li
             variants={left}
-            className="flex items-center gap-2 w-fit quinto-svg-sm"
+            className="flex items-center gap-2 w-fit drop-shadow-quinto-sm"
           >
             <ClockIcon className="w-6 md:w-10 h-6 md:h-10" />{" "}
             <span> 2x1 en tragos de autor</span>
@@ -82,7 +82,7 @@ const ContactUs = () => {
           {/* SOCIALS */}
           <m.li
             variants={left}
-            className="w-full flex items-center justify-center gap-6 quinto-svg-sm"
+            className="w-full flex items-center justify-center gap-6 drop-shadow-quinto-sm"
           >
             <Link
               href="https://www.instagram.com/segundo_bar/"

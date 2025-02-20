@@ -34,7 +34,7 @@ export const PreviewModal = ({ selectedItem }: PreviewModalProps) => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="w-[350px] h-[460px] bg-marron rounded-lg flex flex-col"
+            className="w-[350px] h-[460px] bg-segundo rounded-lg flex flex-col border-2 border-quinto"
           >
             <div className="relative w-full min-h-60 max-h-60">
               {selectedItem.image ? (
@@ -54,20 +54,20 @@ export const PreviewModal = ({ selectedItem }: PreviewModalProps) => {
 
             <div className="w-full flex flex-col grow justify-between gap-4 p-4 min-h-[150px] bg-tercero">
               <div className="flex flex-col gap-2">
-                <h3 className="text-sexto text-3xl md:text-2xl lg:text-3xl font-semibold">
+                <h3 className="text-segundo text-3xl md:text-2xl lg:text-3xl font-semibold">
                   {selectedItem.title}
                 </h3>
                 {selectedItem.description && (
-                  <p className="text-quinto font-medium text-2xl md:text-xl lg:text-2xl">
+                  <p className="text-cuarto font-medium text-2xl md:text-xl lg:text-2xl">
                     {selectedItem.description}
                   </p>
                 )}
               </div>
               <div className="w-full flex justify-between items-center">
-                <button className="px-4 py-1 w-fit flex motion-safe:transition duration-300 ease-in-out text-base md:text-xl font-medium text-quinto rounded bg-segundo hover:bg-quinto border border-quinto hover:text-segundo outline-none focus:outline-none hover:scale-95 active:scale-95">
+                <button className="px-4 py-1 w-fit flex motion-safe:transition duration-300 ease-in-out text-base md:text-xl font-medium text-segundo rounded bg-tercero hover:bg-segundo border-2 border-segundo hover:text-tercero hover:scale-95 active:scale-95">
                   <AddCartIcon className="w-5" />
                 </button>
-                <p className="text-end text-sexto font-semibold text-2xl md:text-xl lg:text-2xl">
+                <p className="text-end text-segundo font-semibold text-2xl md:text-xl lg:text-2xl">
                   {selectedItem.price === null ? (
                     "Precio no disponible"
                   ) : (

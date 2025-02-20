@@ -45,6 +45,7 @@ const MenuCard = ({ item }: { item: MenuItem }) => {
       variants={itemVariants}
       className="bg-segundo rounded-lg flex flex-col border-2 border-quinto"
     >
+      {/* IMAGE */}
       <div className="relative w-full min-h-60 max-h-60">
         {item.image ? (
           <Image
@@ -60,6 +61,7 @@ const MenuCard = ({ item }: { item: MenuItem }) => {
           <div className="bg-segundo w-full h-full rounded-t-lg"></div>
         )}
       </div>
+      {/* TEXT */}
       <div className="w-full flex flex-col grow justify-between gap-4 p-4 min-h-[150px] bg-tercero">
         <div className="flex flex-col gap-2">
           <h3 className="text-segundo text-3xl md:text-2xl lg:text-3xl font-semibold">

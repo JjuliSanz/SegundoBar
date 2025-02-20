@@ -31,6 +31,7 @@ import { VipIcon } from "./VipIcon";
 import { WineIcon } from "./WineIcon";
 import { PresentationIcon } from "./PresentationIcon";
 import ParkingIcon from "./ParkingIcon";
+import TiktokIcon from "./TiktokIcon";
 
 export {
   BeerIcon,
@@ -66,4 +67,5 @@ export {
   WineIcon,
   PresentationIcon,
   ParkingIcon,
+  TiktokIcon,
 };

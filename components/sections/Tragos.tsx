@@ -70,7 +70,7 @@ const Tragos = () => {
             </m.p>
           </div>
           {/* RESERVAR */}
-          <button className="w-fit mx-auto">
+          <m.button variants={opacityAnimation} className="w-fit mx-auto">
             <Link
               href="https://2dobar.meitre.com/"
               target="_blank"
@@ -81,7 +81,7 @@ const Tragos = () => {
               <ReserveIcon className="w-6 md:w-10 h-6 md:h-10" />
               Reserva tu lugar!
             </Link>
-          </button>
+          </m.button>
         </div>
         {/* VIDEO */}
         <div className="order-1 md:order-2 w-full md:w-1/2 h-[450px] md:h-[550px] lg:h-[600px] 850:px-4 flex justify-center items-center">

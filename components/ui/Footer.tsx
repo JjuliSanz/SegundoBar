@@ -4,6 +4,7 @@ import {
   ArrowTop,
   ReserveIcon,
   PDFIcon,
+  MailIcon,
 } from "@/assets/icons/index";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,13 +25,16 @@ const Footer = () => {
         <div className="flex items-center gap-4">
           <Logo className="w-[50px] h-[50px] logo" />
         </div>
-        <span aria-hidden="true" className="hidden sm:inline drop-shadow-quinto">
+        <span
+          aria-hidden="true"
+          className="hidden sm:inline drop-shadow-quinto"
+        >
           |
         </span>
         <div className="flex items-center gap-4">
           {/* INSTAGRAM */}
           <Link
-            href="https://www.instagram.com/mustangbarngrill/"
+            href="https://www.instagram.com/segundo_bar/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto drop-shadow-quinto"
@@ -52,7 +56,7 @@ const Footer = () => {
 
           {/* RESERVAS */}
           <Link
-            href="https://mustang.meitre.com/"
+            href="https://2dobar.meitre.com/"
             target="_blank"
             className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto drop-shadow-quinto"
             aria-label="Resevas del restaurante, se abrirá en una nueva pestaña"
@@ -60,20 +64,9 @@ const Footer = () => {
             <ReserveIcon width={24} height={24} />
           </Link>
 
-          {/* DELIVERY */}
-          {/* <Link
-            href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/selquet-83ae4641-af74-4c1c-90aa-a40abe57ee9d-menu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-quinto text-3xl "
-            aria-label="Pedidos ya del restaurante, se abrirá en una nueva pestaña"
-          >
-            <DeliveryIcon width={24} height={24} />
-          </Link> */}
-
           {/* Facebook */}
           <Link
-            href="https://www.facebook.com/MustangMeatMarket/"
+            href="https://www.facebook.com/2dobar/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto text-3xl drop-shadow-quinto"
@@ -81,16 +74,24 @@ const Footer = () => {
           >
             <Facebook width={24} height={24} />
           </Link>
-
-          {/* MENU */}
+          {/* EMAIL */}
           <Link
+            href="mailto:info@segundobar.com.ar"
+            target="_blank"
+            className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto text-3xl drop-shadow-quinto"
+            aria-label="Mail del restaurante, se abrirá en una nueva pestaña"
+          >
+            <MailIcon width={24} height={24} />
+          </Link>
+          {/* MENU */}
+          {/* <Link
             href="https://queresto.com/mustangmeatmarket/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block hover:scale-110 hover:opacity-70 motion-safe:transition ease-in-out duration-300 motion-reduce:scale-100 text-sexto text-3xl drop-shadow-quinto"
           >
             <PDFIcon width={24} height={24} />
-          </Link>
+          </Link> */}
         </div>
       </div>
 

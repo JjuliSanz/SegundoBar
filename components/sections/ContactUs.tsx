@@ -8,8 +8,10 @@ import {
   ClockIcon,
   Facebook,
   Instagram,
+  MailIcon,
   PinIcon,
   ReserveIcon,
+  TiktokIcon,
 } from "@/assets/icons";
 
 const ContactUs = () => {
@@ -84,6 +86,7 @@ const ContactUs = () => {
             variants={left}
             className="w-full flex items-center justify-center gap-6 drop-shadow-quinto-sm"
           >
+            {/* INSTAGRAM */}
             <Link
               href="https://www.instagram.com/segundo_bar/"
               target="_blank"
@@ -92,6 +95,24 @@ const ContactUs = () => {
             >
               <Instagram className="w-6 md:w-10 h-6 md:h-10" />
             </Link>
+            {/* FACEBOOK */}
+            <Link
+              href="https://www.facebook.com/2dobar/"
+              target="_blank"
+              className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70"
+              aria-label="Facebook del restaurante, se abrirá en una nueva pestaña"
+            >
+              <Facebook className="w-6 md:w-10 h-6 md:h-10" />
+            </Link>
+            {/* EMAIL */}
+            <Link
+              href="mailto:info@segundobar.com.ar"
+              target="_blank"
+              className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70"
+              aria-label="Mail del restaurante, se abrirá en una nueva pestaña"
+            >
+              <MailIcon className="w-6 md:w-10 h-6 md:h-10" />
+            </Link>          
           </m.li>
         </m.ul>
       </m.section>

@@ -39,7 +39,7 @@ const Videos = () => {
     <LazyMotion features={domAnimation}>
       <m.section
         ref={ref}
-        className="w-full max-sm:bg-[url('/galeria/galeria-13-mobile.webp')]  sm:bg-[url('/galeria/galeria-13.jpeg')] bg-cover bg-center bg-fixed"
+        className="w-full bg-[url('/galeria/galeria-13-mobile.webp')]   bg-cover bg-center bg-fixed"
       >
         <m.div
           initial="hidden"

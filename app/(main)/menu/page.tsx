@@ -24,7 +24,7 @@ export default async function Menu({
   return (
     <main className="w-full mt-[50px] min-h-dvh relative flex flex-col ">
       {/* Fondo con imagen */}
-      <div className="absolute inset-0 bg-fixed bg-cover bg-center max-sm:bg-[url('/galeria/galeria-7-mobile.webp')] sm:bg-[url('/galeria/galeria-7.jpeg')]" />
+      <div className="absolute inset-0 bg-fixed bg-cover bg-center bg-[url('/galeria/galeria-7-mobile.webp')] " />
 
       {/* Capa de color con opacidad */}
       <div className="absolute inset-0 bg-primero/60" />

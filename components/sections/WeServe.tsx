@@ -55,19 +55,19 @@ const WeServe = () => {
         </m.h2>
         <div className="w-full grid grid-cols-2 900:grid-cols-4 gap-4 ">
           <Item
-            image="/comida/Apricot-Daydream.jpeg"
+            image="/comida/Apricot-Daydream.webp"
             title="Apricot Daydream"
           />
-          <Item image="/comida/Bocata.jpeg" title="Bocata" />
+          <Item image="/comida/Bocata.webp" title="Bocata" />
           <Item
-            image="/comida/Croquetas-Malfatti.jpeg"
+            image="/comida/Croquetas-Malfatti.webp"
             title="Croquetas Malfatti"
           />
-          <Item image="/comida/Grandpa-Nap.jpeg" title="Grandpa's Nap" />
-          <Item image="/comida/Meat-Balls.jpeg" title="Meat Balls" />
-          <Item image="/comida/Runaway.jpeg" title="Runaway" />
-          <Item image="/comida/Pastrami-Sando.jpeg" title="Pastrami Sando" />
-          <Item image="/comida/Suave-Escoses.jpeg" title="Suave Escoses" />
+          <Item image="/comida/Grandpa-Nap.webp" title="Grandpa's Nap" />
+          <Item image="/comida/Meat-Balls.webp" title="Meat Balls" />
+          <Item image="/comida/Runaway.webp" title="Runaway" />
+          <Item image="/comida/Pastrami-Sando.webp" title="Pastrami Sando" />
+          <Item image="/comida/Suave-Escoses.webp" title="Suave Escoses" />
         </div>
         <m.button variants={opacityAnimation} className="w-fit mx-auto">
           <Link

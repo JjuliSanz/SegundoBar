@@ -73,6 +73,8 @@ const Hero = () => {
 
         <Navbar />
 
+        <h1 className="sr-only">SEGUNDO BAR | Rooftop & Tragos de Autor</h1>
+
         {/* Logo centrado y animado */}
         <m.div
           className="fixed logo z-[70]"

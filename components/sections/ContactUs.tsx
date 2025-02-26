@@ -1,11 +1,12 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
 import Link from "next/link";
 import { container, left } from "@/variants";
 import {
   ArrowTop,
   ClockIcon,
+  CloseIcon,
   Facebook,
   Instagram,
   MailIcon,
@@ -14,13 +15,84 @@ import {
   TiktokIcon,
 } from "@/assets/icons";
 
+const socials = [
+  {
+    name: "Instagram",
+    profile: "@segundo_bar",
+    link: "https://www.instagram.com/segundo_bar/",
+    icon: <Instagram className="w-10 h-10" />,
+  },
+  {
+    name: "Facebook",
+    profile: "2do Bar",
+    link: "https://www.facebook.com/2dobar/",
+    icon: <Facebook className="w-10 h-10" />,
+  },
+  {
+    name: "Email",
+    profile: "info@segundobar.com.ar",
+    link: "mailto:info@segundobar.com.ar",
+    icon: <MailIcon className="w-10 h-10" />,
+  },
+];
+
+interface Social {
+  name: string;
+  profile: string;
+  link: string;
+  icon: JSX.Element;
+}
+
+const Modal = ({
+  social,
+  onClose,
+}: {
+  social: Social;
+  onClose: () => void;
+}) => {
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
+      onClick={onClose}
+    >
+      
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="max-w-[90%] bg-segundo rounded-lg flex flex-col gap-6 items-center justify-center p-4 border-2 border-quinto relative"
+      >
+        
+        {/* TEXT */}
+        <div className="w-full flex flex-wrap items-center justify-center gap-2 text-quinto">
+          {social.icon}
+
+          <h3 className="text-2xl 400:text-3xl font-semibold">
+            {social.profile}
+          </h3>
+        </div>
+        {/* BUTTON */}
+
+        <Link
+          href={social.link}
+          target="_blank"
+          className="uppercase text-quinto px-4 py-2 text-base font-medium rounded border-2 border-quinto hover:scale-95 transition duration-300 ease-in-out hover:text-segundo hover:bg-quinto"
+        >
+          ABRIR {social.name}!
+        </Link>
+      </div>
+    </div>
+  );
+};
+
 const ContactUs = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "0px 0px -200px 0px" });
+
+  const [selectedSocial, setSelectedSocial] = useState<Social | null>(null);
+
   return (
     <LazyMotion features={domAnimation}>
       <m.section
-      id="contacto"
+        id="contacto"
         ref={ref}
         className="relative w-full pt-20"
         style={{
@@ -86,35 +158,51 @@ const ContactUs = () => {
             variants={left}
             className="w-full flex items-center justify-center gap-6 drop-shadow-quinto-sm"
           >
+            {socials.map((social) => (
+              <button
+                key={social.name}
+                onClick={() => setSelectedSocial(social)}
+                className="flex items-center gap-2 transition duration-100 hover:scale-95 hover:opacity-70 text-sexto"
+                aria-label={`Abrir modal de ${social.name}`}
+              >
+                {social.icon}
+              </button>
+            ))}
             {/* INSTAGRAM */}
-            <Link
+            {/* <Link
               href="https://www.instagram.com/segundo_bar/"
               target="_blank"
               className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70"
               aria-label="Instagram del restaurante, se abrirá en una nueva pestaña"
             >
               <Instagram className="w-6 md:w-10 h-6 md:h-10" />
-            </Link>
+            </Link> */}
             {/* FACEBOOK */}
-            <Link
+            {/* <Link
               href="https://www.facebook.com/2dobar/"
               target="_blank"
               className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70"
               aria-label="Facebook del restaurante, se abrirá en una nueva pestaña"
             >
               <Facebook className="w-6 md:w-10 h-6 md:h-10" />
-            </Link>
+            </Link> */}
             {/* EMAIL */}
-            <Link
+            {/* <Link
               href="mailto:info@segundobar.com.ar"
               target="_blank"
               className="flex items-center gap-2 motion-safe:transition ease-in-out duration-100 hover:scale-[0.97] hover:opacity-70"
               aria-label="Mail del restaurante, se abrirá en una nueva pestaña"
             >
               <MailIcon className="w-6 md:w-10 h-6 md:h-10" />
-            </Link>          
+            </Link> */}
           </m.li>
         </m.ul>
+        {selectedSocial && (
+          <Modal
+            social={selectedSocial}
+            onClose={() => setSelectedSocial(null)}
+          />
+        )}
       </m.section>
     </LazyMotion>
   );

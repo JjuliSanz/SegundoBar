@@ -21,12 +21,25 @@ const Tragos = () => {
             "linear-gradient(to bottom, var(--primero) 0%, var(--segundo) 50%, var(--tercero) 100%)",
         }}
       >
+        {/* VIDEO */}
+        <div className="order-1 md:order-2 w-full md:w-1/2 h-[450px] md:h-[550px] lg:h-[600px] 850:px-4 flex justify-center items-center">
+          <m.video
+            variants={opacityAnimation}
+            className="w-full h-full object-cover border-2 border-quinto p-2 bg-gradient-to-b from-cuarto to-primero"
+            loop
+            muted
+            autoPlay
+            disablePictureInPicture
+            disableRemotePlayback
+          >
+            <source src="/vibe/tragos.mp4" type="video/mp4" />
+          </m.video>
+        </div>
         {/* TEXT */}
         <div className="order-2 md:order-1 w-full md:w-1/2 flex flex-col md:justify-between max-md:gap-10">
           <div className="flex flex-col gap-4">
             <m.h2
               variants={opacityAnimation}
-              // className="text-4xl md:text-5xl text-center w-full bg-clip-text text-transparent bg-gradient-to-b from-sexto to-quinto font-primary font-semibold heading"
               className="text-4xl md:text-5xl text-center w-full text-sexto font-primary font-semibold text-shadow-quinto"
             >
               AFTER OFFICE
@@ -82,20 +95,6 @@ const Tragos = () => {
               Reserva tu lugar!
             </Link>
           </m.button>
-        </div>
-        {/* VIDEO */}
-        <div className="order-1 md:order-2 w-full md:w-1/2 h-[450px] md:h-[550px] lg:h-[600px] 850:px-4 flex justify-center items-center">
-          <m.video
-            variants={opacityAnimation}
-            className="w-full h-full object-cover border-2 border-quinto p-2 bg-gradient-to-b from-cuarto to-primero"
-            loop
-            muted
-            autoPlay
-            disablePictureInPicture
-            disableRemotePlayback
-          >
-            <source src="/vibe/tragos.mp4" type="video/mp4" />
-          </m.video>
         </div>
       </m.section>
     </LazyMotion>

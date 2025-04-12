@@ -14,12 +14,6 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
       // Logged in users are authenticated, otherwise redirect to login page
       return !!auth;
     },
-    // async signIn({ account, profile }) {
-    //   if (profile?.email && allowedEmails.includes(profile.email)) {
-    //     return true;
-    //   }
-    //   return "/error"; // redirige a tu página de error
-    // },
     async signIn({ user }) {
       const email = user.email!;
 

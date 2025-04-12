@@ -4,13 +4,21 @@ import MenuDashboardList from "@/components/dashboard/MenuDashboardList";
 import SearchBar from "@/components/dashboard/SearchBar";
 import Link from "next/link";
 import { getCategories } from "@/utils/serverActions";
+import { categoriesLocal } from "@/constants";
 
 export default async function Dashboard({
   searchParams,
 }: {
   searchParams?: { category?: string; query?: string };
 }) {
-  const categories = await getCategories();
+  let categories;
+
+  try {
+    categories = await getCategories();
+  } catch (error) {
+    console.error("Fallo Prisma, usando categorías locales:", error);
+    categories = categoriesLocal;
+  }
   const selectedCategory =
     searchParams?.category ||
     (categories.length > 0 ? categories[0].title : "");

@@ -10,13 +10,21 @@ import { getCategories } from "@/utils/serverActions";
 import Link from "next/link";
 import React, { Suspense } from "react";
 import Nav from "./Nav";
+import { categoriesLocal } from "@/constants";
 
 export default async function Menu({
   searchParams,
 }: {
   searchParams?: { category?: string; query?: string };
 }) {
-  const categories = await getCategories();
+  let categories;
+
+  try {
+    categories = await getCategories();
+  } catch (error) {
+    console.error("Fallo Prisma, usando categorías locales:", error);
+    categories = categoriesLocal;
+  }
   const query = searchParams?.query || "";
   const selectedCategory =
     searchParams?.category ||

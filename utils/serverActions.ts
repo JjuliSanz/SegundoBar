@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 
 import { revalidatePath } from "next/cache";
@@ -9,6 +8,7 @@ import { z } from "zod";
 // import { AuthError } from "next-auth";
 
 import prisma from "@/prisma/prisma"; // Asegúrate de que la ruta sea correcta
+import { menuItemsLocal } from "@/constants";
 
 const foodSchema = z.object({
   orden: z.coerce
@@ -161,32 +161,34 @@ export async function updateFoodById(
 }
 
 export async function getFoodsByCategory(categoryTitle: string) {
-  // Intenta buscar la categoría por su título
-  const category = await prisma.category.findUnique({
-    where: { title: categoryTitle },
-  });
+  try {
+    const category = await prisma.category.findUnique({
+      where: { title: categoryTitle },
+    });
 
-  // Si la categoría no existe, retorna un mensaje específico
-  if (!category) {
-    console.error("Categoria no encontrada");
-    return { error: "Categoría no encontrada" };
+    if (!category) {
+      console.error("Categoría no encontrada");
+      return { error: "Categoría no encontrada", foods: menuItemsLocal, fallback: true };
+    }
+
+    const foods = await prisma.food.findMany({
+      where: { categoryId: category.id },
+      orderBy: { orden: "asc" },
+    });
+
+    if (!foods || foods.length === 0) {
+      return { error: "No se encontraron comidas en esta categoría", foods: menuItemsLocal, fallback: true };
+    }
+
+    return { foods };
+  } catch (error) {
+    console.error("Error al obtener comidas:", error);
+    return {
+      error: "Error al conectar con la base de datos",
+      foods: menuItemsLocal,
+      fallback: true,
+    };
   }
-
-  // Buscar las comidas que pertenecen a esa categoría
-  const foods = await prisma.food.findMany({
-    where: { categoryId: category.id },
-    orderBy: {
-      orden: "asc",
-    },
-  });
-
-  // Si no se encuentran comidas, retorna un mensaje específico
-  if (foods.length === 0) {
-    return { error: "No se encontraron comidas en esta categoría" };
-  }
-
-  // Si todo está bien, retorna las comidas
-  return { foods };
 }
 
 export async function getFoodById(foodId: string) {

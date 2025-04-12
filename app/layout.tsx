@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
+import LenisScrollProvider from "@/components/providers/LenisProvider";
 
 // const primaryFont = localFont({
 //   src: "./fonts/HudsonNY-Serif-edited.woff",
@@ -52,7 +53,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${primaryFont.variable} antialiased`}>{children}</body>
+      <body className={`${primaryFont.variable} antialiased`}>
+        <LenisScrollProvider> {children}</LenisScrollProvider>
+      </body>
       {/* <body className={` antialiased`}>{children}</body> */}
     </html>
   );

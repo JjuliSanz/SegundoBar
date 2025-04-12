@@ -19,7 +19,7 @@ export default function Error({
     <div className="w-full h-screen p-10 flex flex-col items-center gap-2">
       <SadIcon className="w-10 h-10 text-quinto" />
       <h2 className="text-xl text-quinto font-semibold">Algo salió mal</h2>
-      <p className="text-lg text-cuarto font-medium">{error.message}</p>
+      <p className="text-lg text-tercero font-medium">{error.message}</p>
       <button
         onClick={() => reset()}
         className="text-quinto bg-segundo px-4 py-2 rounded"

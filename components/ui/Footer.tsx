@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <span className="place-self-end bottom-0 right-0 text-sexto text-center text-xs font-serif font-semibold flex gap-1">
+      <span className="place-self-center bottom-0 right-0 text-sexto text-center text-xs font-serif font-semibold flex gap-1">
         Made by
         <Link
           href="https://miraiweblab.com"

@@ -21,8 +21,9 @@ export default async function Menu({
 
   try {
     categories = await getCategories();
+    
   } catch (error) {
-    console.error("Fallo Prisma, usando categorías locales:", error);
+    console.error("Fallo Prisma, usando categorías locales:");
     categories = categoriesLocal;
   }
   const query = searchParams?.query || "";
@@ -50,7 +51,7 @@ export default async function Menu({
       <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-center mt-10 z-10">
         <SearchBarMenu placeholder="Buscar productos por su titulo" />
         <Link
-          href="https://queresto.com/mustangmeatmarket/"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
           className="w-fit motion-safe:transition duration-150 ease-in-out text-base sm:text-xl font-medium px-6 py-2 rounded-xl flex items-center gap-2 bg-gradient-to-br from-segundo to-tercero border-2 border-quinto text-quinto hover:text-sexto  active:text-sexto "

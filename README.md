@@ -1,6 +1,6 @@
-# MUSTANG Restaurante Website
+# Segunda Bar | Rooftop & Tragos de Autor
 
-This project showcases the beauty and offerings of our restaurant through an engaging and interactive web experience. Explore images of our location and delicious food, detailed information about our restaurant, and a comprehensive menu displaying various pizzas and other dishes, each accompanied by images, descriptions, and prices.
+This project showcases the beauty and offerings of our bar through an engaging and interactive web experience. Explore images of our location and delicious food, detailed information about our bar, and a comprehensive menu displaying various drinks and other dishes, each accompanied by images, descriptions, and prices.
 
 ## Features
 
@@ -67,7 +67,7 @@ The dashboard provides the following features:
 
 <p>
    <h1 style="font-size: 48px; font-weight: bold; font-family: sans; color: var(--primary);">
-    MUSTANG
+    SEGUNDO 
   </h1>
-  <img src="public/logo.webp" alt="Mustang Logo" width="100"/>
+  <img src="public/logo.png" alt="Segundo Logo" width="100"/>
 </p>

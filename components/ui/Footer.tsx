@@ -98,11 +98,12 @@ const Footer = () => {
       <span className="place-self-center bottom-0 right-0 text-sexto text-center text-xs font-serif font-semibold flex gap-1">
         Made by
         <Link
-          href="https://miraiweblab.com"
+          // href="https://miraiweblab.com"
+          href="https://julian-dev-portfolio.vercel.app/"
           className="underline flex items-center hover:scale-95 transition ease-in duration-150 hover:opacity-70 active:scale-95 active:opacity-70"
           aria-label="Portfolio del desarrollador, se abrirá en una nueva pestaña"
         >
-          MIRAI WEB LAB
+          JULIAN SANZ
           <ArrowTop className="w-4 rotate-45" />
         </Link>
       </span>
